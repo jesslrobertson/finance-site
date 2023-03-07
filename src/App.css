@@ -1,0 +1,60 @@
+:root {
+  --gold: #FFB433;
+  --dark-green: #112C21;
+  --blue-purple: #112065;
+  --bright-green: #316F28;
+  --white: #FaFaFa;
+}
+
+.App {
+  font-family: 'Mukta', sans-serif;
+  background-color: var(--white);
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: var(--blue-purple);
+  color: var(--white);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.nav-link-box {
+  display: flex;
+  width: 40vw;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section {
+  height: 85vh;
+  width: 100%;
+}
+.landing {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40vw;
+  padding: 2rem;
+}
+
+.landing > img {
+  border-radius: 10px;
+  margin: 3rem;
+  height: 35vh;
+}

@@ -5,7 +5,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import DropdownMenu from "react-bootstrap/esm/DropdownMenu";
 import DropdownToggle from "react-bootstrap/esm/DropdownToggle";
-import MenuIcon from '@mui/icons-material/Menu';
+
 
 export default function HeaderTest() {
 
@@ -53,7 +53,7 @@ console.log(menu)
         </div>    
 
 
-        <MenuIcon id = "menu-icon"/>
+        
             </>
         )
         

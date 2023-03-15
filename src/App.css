@@ -17,21 +17,95 @@ button {
   padding: 1rem;
   background-color: var(--blue-purple);
   color: var(--white);
+  min-width: 80px;
+  
 }
 
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
+  
+  
+}
+
+.nav-button{
+  min-width: 105px;
+}
+
+.nav-container {
+  display: flex;
+  width: 80vw;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.nav-container > h1 {
+  width: 450px;
 }
 
 .nav-link-box {
   display: flex;
-  width: 40vw;
-  justify-content: space-between;
+  width: 100%;
+  gap: 25px;
   align-items: center;
+  justify-content: flex-end;
+  list-style-type: none;
+  position: relative;
 }
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  border: none;
+  background-color: var(--blue-purple);
+  color: var(--white);
+  border-radius: 10px;
+  height: 25px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.item-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 80px;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.nav-item {
+  color: var(--blue-purple);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  width: 5.5vw;
+  height: 36px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  border-bottom: 1px solid var(--blue-purple);
+  width: 70%;
+}
+
+.item-list-hidden {
+  display: none;
+}
+
+
+
 
 .section {
   height: 85vh;
@@ -58,3 +132,47 @@ header {
   margin: 3rem;
   height: 35vh;
 }
+
+#menu-icon {
+  display: none;
+}
+
+@media only screen and (max-width: 420px) {
+    .nav-container {
+      display: none;
+    }
+
+    #menu-icon {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      height: 3rem;
+      width: auto;
+      padding:  1em 1em;
+    }
+
+    .landing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 11px;
+    text-align: center;
+    }
+
+ .landing-text {
+  width: 80vw;
+ }
+
+    .landing > img {
+      height: 15vh;
+    }
+    
+.section {
+  padding: 0;
+}
+
+}
+
+

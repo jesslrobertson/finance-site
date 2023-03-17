@@ -11,6 +11,11 @@
   background-color: var(--white);
 }
 
+.App-dark {
+  background-color: var(--blue-purple);
+  color: white;
+}
+
 button {
   border: none;
   border-radius: 10px;
@@ -18,7 +23,6 @@ button {
   background-color: var(--blue-purple);
   color: var(--white);
   min-width: 80px;
-  
 }
 
 header {
@@ -30,6 +34,12 @@ header {
 }
 
 .nav-button{
+  min-width: 105px;
+}
+
+.nav-button-dark {
+  background-color: white;
+  color: var(--blue-purple);
   min-width: 105px;
 }
 
@@ -95,9 +105,32 @@ header {
   cursor: pointer;
 }
 
+.nav-item-dark {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  width: 5.5vw;
+  height: 36px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
 .nav-item:hover {
   border-bottom: 1px solid var(--blue-purple);
   width: 70%;
+}
+
+.nav-item-dark:hover {
+  border-bottom: 1px solid white;
+  width: 70%;
+}
+
+.learn-btn-dark {
+  background-color: white;
+  color: var(--blue-purple);
 }
 
 .item-list-hidden {
@@ -105,12 +138,19 @@ header {
 }
 
 
+.dark-mode-switch {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 1em;
+  right:  1em;
+}
+
 
 
 .section {
   height: 85vh;
   width: 100%;
-  background-color: whitesmoke;
 }
 .landing {
   display: flex;
@@ -157,6 +197,10 @@ header {
 @media only screen and (max-width: 420px) {
     .nav-container {
       display: none;
+    }
+
+    .dark-mode-switch {
+      left: 1em;
     }
 
 

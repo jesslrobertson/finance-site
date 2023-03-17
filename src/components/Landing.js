@@ -1,9 +1,13 @@
-import React, {useState} from 'react'
+import React, {useContext, useState} from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { ThemeContext } from "./ContextProvider"
+import DarkModeSwitch from './DarkModeSwitch';
 
 function Landing() {
 
+  //context
+  const {darkMode} = useContext(ThemeContext)
 
 //state used to toggle menu
 const [menuToggle, setMenuToggle] = useState(false)
@@ -34,7 +38,7 @@ const menuClick = () => {
             <div className='landing-text'>
             <h1>We help you put all the pieces of your financial puzzle together</h1>
             <p>Empowering you to be the CFO of your family</p>
-            <button>Learn More</button>
+            <button className = {darkMode ? "learn-btn-dark" : "learn-btn"}>Learn More</button>
       </div>
         </>
       

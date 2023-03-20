@@ -19,7 +19,7 @@ const menuClick = () => {
 
 
   return (
-    <div className='section landing'>
+    <div className= {darkMode ? "section-dark landing" : 'section landing'}>
      { menuToggle ?  <CloseIcon id = "menu-icon" onClick = {menuClick} /> : <MenuIcon id = "menu-icon" onClick = {menuClick}/>  }
       { menuToggle ?
         <>

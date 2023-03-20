@@ -142,8 +142,8 @@ header {
   display: flex;
   align-items: center;
   position: absolute;
-  top: 1em;
-  right:  1em;
+  top: 2em;
+  right:  2em;
 }
 
 
@@ -152,6 +152,16 @@ header {
   height: 85vh;
   width: 100%;
 }
+
+.section-dark {
+  background-color: var(--blue-purple);
+  height: 85vh;
+  width: 100%;
+  color: white;
+}
+
+
+
 .landing {
   display: flex;
   flex-direction: row;
@@ -214,6 +224,7 @@ header {
       width: auto;
       padding:  1em 1em;
     }
+
 
     .landing{
     display: flex;

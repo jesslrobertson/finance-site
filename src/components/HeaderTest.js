@@ -8,9 +8,11 @@ import DropdownToggle from "react-bootstrap/esm/DropdownToggle";
 import Switch from '@mui/material/Switch';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
-import { yellow } from "@mui/material/colors";
+import { blue, yellow } from "@mui/material/colors";
 import { ThemeContext } from "./ContextProvider"
 import DarkModeSwitch from "./DarkModeSwitch";
+import {Link} from "react-router-dom"
+import HomeIcon from '@mui/icons-material/Home';
 
 
 export default function HeaderTest() {
@@ -35,16 +37,18 @@ console.log(menu)
     return (
     <>
     <div className="nav-container" onMouseLeave={()=> setActiveDropDown(null)}>
-
+        <Link to = "/">{!darkMode ? <HomeIcon sx = {{ color: blue[900], fontSize: 40}} /> : <HomeIcon style = {{ color: "white" }} sx = {{fontSize: 40}} />}</Link>  
         <h1>FIT Financial</h1>
         
         
+        
             <div className = "nav-link-box">
+                        
                                                     {menu.map((variant, index) => { 
                                                             const isActive = variant.id === activeDropDown
                                                         return    ( 
                                             <div >
-                                                <button className = {darkMode ? "nav-button-dark" : "nav-button"} onMouseEnter = {() => setActiveDropDown(variant.id)}>{variant.title}</button> 
+                                                <Link to ={`/${variant.title}`}><button className = {darkMode ? "nav-button-dark" : "nav-button"} onMouseEnter = {() => setActiveDropDown(variant.id)}>{variant.title}</button> </Link>
                                                 {isActive && <div className =  "item-list">
                                                     <p className = { darkMode ? "nav-item-dark" : "nav-item" }>Service 1</p>
                                                     <p className = { darkMode ? "nav-item-dark" : "nav-item" }>Service 2</p>
@@ -53,12 +57,14 @@ console.log(menu)
                                                 </div>
                                                 
                                                         }
+                                                        
                                                 </div>
                             
                                         )}
                                         )
                                         }
         <button className = {darkMode ?  "nav-button-dark" : "nav-button"} >Contact</button>
+        
             </div>
 
 
